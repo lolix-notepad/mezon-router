@@ -50,16 +50,14 @@ class Utils
      */
     public static function prepareRoute($route): string
     {
-        if (is_array($route) && $route[0] === '') {
-            $route = $_SERVER['REQUEST_URI'];
-        }
-
-        if ($route === '/') {
-            $route = 'index';
-        }
-
         if (is_array($route)) {
-            $route = implode('/', $route);
+            if ($route[0] === '') {
+                $route = $_SERVER['REQUEST_URI'];
+            } else {
+                $route = implode('/', $route);
+            }
+        } elseif ($route === '/') {
+            $route = 'index';
         }
 
         return trim($route, '/');
