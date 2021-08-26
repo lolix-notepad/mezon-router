@@ -74,10 +74,13 @@ class Utils
     {
         if (is_string($processor)) {
             return $processor;
-        } elseif (isset($processor[0]) && isset($processor[1])) {
+        }
+
+        if (isset($processor[0]) && isset($processor[1])) {
             if (is_object($processor[0])) {
                 return get_class($processor[0]) . '::' . $processor[1];
-            } elseif (is_string($processor[0])) {
+            }
+            if (is_string($processor[0])) {
                 return $processor[0] . '::' . $processor[1];
             }
         }
