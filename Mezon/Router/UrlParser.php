@@ -408,7 +408,7 @@ trait UrlParser
     }
 
     /**
-     * Does parameter exists
+     * Does parameter exist?
      *
      * @param string $name
      *            Param name
