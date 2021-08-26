@@ -167,7 +167,7 @@ trait UrlParser
      *
      * @param string $route
      *            Route
-     * @return string|bool Result of the router'scall or false if any error occured
+     * @return string|bool Result of the router's call or false if any error occured
      */
     public function findDynamicRouteProcessor(string $route)
     {
