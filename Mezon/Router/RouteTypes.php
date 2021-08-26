@@ -2,7 +2,7 @@
 namespace Mezon\Router;
 
 /**
- * Default types for router - integer, string, command, list if ids
+ * Default types for router - integer, string, command, list of ids
  *
  * @author gdever
  */
