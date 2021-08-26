@@ -137,7 +137,7 @@ trait UrlParser
      */
     protected function getDynamicRouteProcessor(string $route, string $requestMethod = '')
     {
-        $bunches = $this->paramRoutes[$requestMethod == '' ? $_SERVER['REQUEST_METHOD'] : $requestMethod];
+        $bunches = $this->paramRoutes[$requestMethod === '' ? $_SERVER['REQUEST_METHOD'] : $requestMethod];
 
         foreach ($bunches as $bunch) {
             $matches = [];
